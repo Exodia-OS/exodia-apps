@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+# Welcome / Startup application for Exodia OS #
+
+DIR='/usr/share/exodia/welcome'
+# DIR='/home/ozil/Public/Temp/exodia-welcome/files/welcome'
+stdbuf -oL -eL yad  --width='900' --height='570' --borders=0 --center \
+					--title='Welcome' \
+					--window-icon=exodia \
+					--no-buttons --no-escape \
+                    --html --uri="$DIR/welcome.html" \
+                    --print-uri 2>&1 \
+| while read -r line; do
+	case ${line##*/} in
+		run_app1)  exodia-help & ;;
+		run_app2)  dunstify -u low "Launching Calamares..." && /etc/calamares/launch.sh & ;;
+		*)		   echo "No URI" ;;
+	esac
+done
