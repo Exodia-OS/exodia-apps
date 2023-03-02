@@ -1,0 +1,33 @@
+#
+# Maintainer: Mahmoud Mohamed (00xWolf) <mmsaeed509@gmail.com> , <https://github.com/mmsaeed509>
+#
+
+pkgname=exodia-assistant
+pkgver=1.0
+pkgrel=1
+pkgdesc="Assistant Manager for Exodia OS"
+url="https://github.com/Exodia-OS/exodia-packages"
+arch=('any')
+license=('GPL3')
+makedepends=()
+groups=('exodia-apps')
+depends=('')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+
+prepare() {
+
+	cp -af ../files/. ${srcdir}
+
+}
+
+package() {
+
+	(find help -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/exodia/{}" \;)
+	install -Dm 755 exodia-help 			${pkgdir}/usr/local/bin/exodia-assistant
+	install -Dm 644 exodia-help.desktop	    ${pkgdir}/usr/share/applications/exodia-assistant.desktop
+
+}
+
+
