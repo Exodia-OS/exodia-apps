@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Exodia OS Assistant
+Comment=Assistant for Exodia OS
+Exec=exodia-assistant
+Icon=exodia-violet
+Type=Application
+Categories=System;

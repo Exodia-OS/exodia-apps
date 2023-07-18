@@ -1,0 +1,35 @@
+#
+# Maintainer: Mahmoud Mohamed (00xWolf) <mmsaeed509@gmail.com> , <https://github.com/mmsaeed509>
+#
+
+pkgname=exodia-assistant
+pkgver=1.0
+pkgrel=4
+pkgdesc="Assistant Manager for Exodia OS"
+url="https://github.com/Exodia-OS/exodia-apps"
+arch=('any')
+license=('GPL3')
+makedepends=()
+groups=('exodia-apps')
+depends=(
+	'python-markdown' 'python-markdown2'
+	'python-beautifulsoup4' 'python-pillow=9.5.0-2'
+	'python-pip' 'python-pipenv' 'tk')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+# install=${pkgname}.install
+
+prepare() {
+
+	cp -af ../files/. ${srcdir}
+
+}
+
+package() {
+
+	(find exodia-assistant -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/exodia/{}" \;)
+	install -Dm 644 ${srcdir}/exodia-assistant.desktop	   ${pkgdir}/usr/share/applications/exodia-assistant.desktop
+	install -Dm 755 ${srcdir}/${pkgname}/exodia-assistant    ${pkgdir}/usr/local/bin/exodia-assistant
+
+}

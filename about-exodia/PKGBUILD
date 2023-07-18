@@ -1,0 +1,32 @@
+#
+# Maintainer: Mahmoud Mohamed (00xWolf) <mmsaeed509@gmail.com> , <https://github.com/mmsaeed509>
+#
+
+pkgname=about-exodia-os
+pkgver=1.0
+pkgrel=5
+pkgdesc="About Exodia OS"
+url="https://github.com/Exodia-OS/exodia-apps"
+arch=('any')
+license=('GPL3')
+makedepends=()
+groups=('exodia-apps')
+depends=('yad')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+
+source=(
+	'about-exodia-os'
+	'about.desktop'
+)
+
+sha256sums=(
+	'SKIP'
+	'SKIP'
+)
+
+package() {
+	install -Dm 755 about-exodia-os   		${pkgdir}/usr/local/bin/about-exodia-os
+	install -Dm 644 about.desktop	        ${pkgdir}/usr/share/applications/about.desktop
+}
