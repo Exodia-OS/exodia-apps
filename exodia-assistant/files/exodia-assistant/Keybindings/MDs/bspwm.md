@@ -28,7 +28,7 @@
 |  ctrl   +  Print       +           |  Takes a screenshot of active window                             |
 |  mod    +  ctrl        +  Print    |  Takes a screenshot of an area                                   |
 |  mod    +  c           +           |  Kill an App                                                     |
-|  mod    +  Escape      +           |  Reload keybindings                                              |
+|  mod    +  k           +           |  Reload keybindings                                              |
 |  ctrl   +  alt         +  Escape   |  Use xkill to murder an App via a skull cursor of death (scary)  |
 |  ctrl   +  shift       +  q        |  Quit BSPWM                                                      |
 |  ctrl   +  shift       +  r        |  Restart BSPWM                                                   |
