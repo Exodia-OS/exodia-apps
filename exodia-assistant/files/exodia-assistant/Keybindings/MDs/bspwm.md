@@ -45,3 +45,4 @@
 |  mod    +  ctrl        +  ← ↑ → ↓  |  Expand the window                                               |
 |  mod    +  alt         +  ← ↑ → ↓  |  Shrink the window                                               |
 |  mod    +  shift       +  i        |  Hide/Unhide a window                                            |
+|  Escape +  alt         + ← ↑ → ↓   | Move floating windows                                            |
