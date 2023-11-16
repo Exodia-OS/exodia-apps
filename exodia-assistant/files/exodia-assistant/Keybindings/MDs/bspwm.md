@@ -36,6 +36,7 @@
 |  mod    +  ctrl+{1-9}  +           |  Preselect the ratio                                             |
 |  mod    +  f           +           |  Enable FullScreen                                               |
 |  mod    +  Space       +           |  Toggle betweeen floating and tiled                              |
+|  mod    +  l           +           |  Toggle betweeen monocle and tiled                               |
 |  super  +  shift       +  space    |  Enable Pseudo tiled and tiled mode                              |
 |  mod    +  ctrl        +  m/x/y/z  |  Set the node flags to "Marked/Locked/Sticky/Private"            |
 |  mod    +  shift       +  ← ↑ → ↓  |  Send the window to the edge of the screen                       |
