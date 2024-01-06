@@ -11,7 +11,7 @@
 |  mod    +  r           +           |  Runs apps as root                                               |
 |  mod    +  w           +           |  Opens windows menu                                              |
 |  mod    +  d           +           |  Open/Close EWW dashboard                                        |
-|  mod    +  Shift       +  g        |  Opens google chrome                                             |
+|  mod    +  Shift       +  b        |  Opens Brave Browser                                             |
 |  mod    +  Shift       +  m        |  Opens Music Player                                              |
 |  mod    +  Shift       +  e        |  Opens a text editor GUI (geany)                                 |
 |  mod    +  Shift       +  w        |  Opens a web browser (firefox)                                   |
