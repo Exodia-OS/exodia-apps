@@ -3,7 +3,7 @@
 #
 
 pkgname=exodia-assistant
-pkgver=1.6
+pkgver=1.7
 pkgrel=9
 pkgdesc="Assistant Manager for Exodia OS"
 url="https://github.com/Exodia-OS/exodia-apps"
@@ -11,10 +11,6 @@ arch=('any')
 license=('GPL3')
 makedepends=()
 groups=('exodia-apps')
-depends=(
-	'python-markdown' 'python-markdown2'
-	'python-beautifulsoup4' 'python-pillow'
-	'python-pip' 'python-pipenv' 'tk')
 conflicts=('exodia-help')
 provides=("${pkgname}")
 options=(!strip !emptydirs)

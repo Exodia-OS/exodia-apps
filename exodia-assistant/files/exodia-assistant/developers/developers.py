@@ -31,7 +31,7 @@ class DevelopersTab(tk.Frame):
         # path = os.getcwd() + "/developers/images/"
         path = "/usr/share/exodia/exodia-assistant/developers/images/"
         profile_image = Image.open(path + "wolf.png")
-        profile_image = profile_image.resize((100, 100), Image.ANTIALIAS)  # Resize the image
+        profile_image = profile_image.resize((100, 100), Image.LANCZOS)  # Resize the image
         self.profile_image = ImageTk.PhotoImage(profile_image)
 
         # Create a canvas to hold the developer picture
@@ -59,7 +59,7 @@ class DevelopersTab(tk.Frame):
 
         # Load and display the profile picture
         profile_image2 = Image.open(path + "Abdallah.png")
-        profile_image2 = profile_image2.resize((100, 100), Image.ANTIALIAS)  # Resize the image
+        profile_image2 = profile_image2.resize((100, 100), Image.LANCZOS)  # Resize the image
         self.profile_image2 = ImageTk.PhotoImage(profile_image2)
 
         # Create a canvas to hold the developer picture
@@ -87,7 +87,7 @@ class DevelopersTab(tk.Frame):
 
         # Load and display the profile picture
         profile_image3 = Image.open(path + "omar.png")
-        profile_image3 = profile_image3.resize((100, 100), Image.ANTIALIAS)  # Resize the image
+        profile_image3 = profile_image3.resize((100, 100), Image.LANCZOS)  # Resize the image
         self.profile_image3 = ImageTk.PhotoImage(profile_image3)
 
         # Create a canvas to hold the developer picture

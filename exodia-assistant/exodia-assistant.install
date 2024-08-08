@@ -31,6 +31,8 @@ On_Blue='\033[44m'  On_Purple='\033[45m' On_Cyan='\033[46m'  On_White='\033[47m'
 
 ## Installing python Packages ##
 post_install() {
+
+	source /usr/local/share/pip/bin/activate
 	
 	echo -e ${Green}"\n[*] Installing python Packages.\n" ${RESET_COLOR}
 
@@ -41,31 +43,31 @@ post_install() {
 	echo -e "${DIR}"
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}tkinter ${BBlue}library." ${RESET_COLOR}
-	sudo pip install tk
+	pip install tk
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}tkhtmlview ${BBlue}library." ${RESET_COLOR}
-	sudo pip install tkhtmlview
+	pip install tkhtmlview
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}markdown2 ${BBlue}library." ${RESET_COLOR}
-	sudo pip install markdown2
+	pip install markdown2
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}markdown ${BBlue}library." ${RESET_COLOR}
-	sudo pip install markdown
+	pip install markdown
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}yview ${BBlue}library." ${RESET_COLOR}
-	sudo pip install yview
+	pip install yview
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}beautifulsoup4 ${BBlue}library." ${RESET_COLOR}
-	sudo pip install beautifulsoup4
+	pip install beautifulsoup4
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}pil ${BBlue}library." ${RESET_COLOR}
-	sudo pip install pil
+	pip install pil
 
 	echo -e ${BBlue}"   ==> Installing ${BPurple}pillow ${BBlue}library." ${RESET_COLOR}
-	sudo pip install pillow
+	pip install pillow
 
 	echo -e ${BBlue}"   ==> Updating ${BPurple}pip ${BBlue}environment." ${RESET_COLOR}
-	sudo pip install --upgrade pip
+	pip install --upgrade pip
 
 	echo -e ${Green}"\n[✔] DONE!\n" ${RESET_COLOR}
 	  
