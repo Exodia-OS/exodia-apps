@@ -42,29 +42,7 @@ post_install() {
 
 	echo -e "${DIR}"
 
-	echo -e ${BBlue}"   ==> Installing ${BPurple}tkinter ${BBlue}library." ${RESET_COLOR}
-	pip install tk
-
-	echo -e ${BBlue}"   ==> Installing ${BPurple}tkhtmlview ${BBlue}library." ${RESET_COLOR}
-	pip install tkhtmlview
-
-	echo -e ${BBlue}"   ==> Installing ${BPurple}markdown2 ${BBlue}library." ${RESET_COLOR}
-	pip install markdown2
-
-	echo -e ${BBlue}"   ==> Installing ${BPurple}markdown ${BBlue}library." ${RESET_COLOR}
-	pip install markdown
-
-	echo -e ${BBlue}"   ==> Installing ${BPurple}yview ${BBlue}library." ${RESET_COLOR}
-	pip install yview
-
-	echo -e ${BBlue}"   ==> Installing ${BPurple}beautifulsoup4 ${BBlue}library." ${RESET_COLOR}
-	pip install beautifulsoup4
-
-	echo -e ${BBlue}"   ==> Installing ${BPurple}pil ${BBlue}library." ${RESET_COLOR}
-	pip install pil
-
-	echo -e ${BBlue}"   ==> Installing ${BPurple}pillow ${BBlue}library." ${RESET_COLOR}
-	pip install pillow
+	pip install -r libs.txt
 
 	echo -e ${BBlue}"   ==> Updating ${BPurple}pip ${BBlue}environment." ${RESET_COLOR}
 	pip install --upgrade pip

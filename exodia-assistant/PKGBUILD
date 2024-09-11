@@ -3,13 +3,13 @@
 #
 
 pkgname=exodia-assistant
-pkgver=1.7
-pkgrel=9
+pkgver=2.0
+pkgrel=1
 pkgdesc="Assistant Manager for Exodia OS"
 url="https://github.com/Exodia-OS/exodia-apps"
 arch=('any')
 license=('GPL3')
-makedepends=()
+depends=('python-pyqt5' 'python-pyqt5-chart' 'python-xlib')
 groups=('exodia-apps')
 conflicts=('exodia-help')
 provides=("${pkgname}")
