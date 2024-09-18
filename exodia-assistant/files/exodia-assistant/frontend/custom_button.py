@@ -14,7 +14,7 @@ from PyQt5.QtGui import QPainter, QColor, QRegion, QPolygon, QPen, QFont, QFontD
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 
 class CustomButton(QPushButton):
-    def __init__(self, text, points, x, y, width, height, color="#121212", border_color="#00B0C8", border_thickness=3, parent=None):
+    def __init__(self, text, points, x, y, width, height, color="#121212", border_color="#00B0C8", border_thickness=5, parent=None):
         super().__init__(text, parent)
         self.predator_font = None
         self.setFixedSize(200, 100)  # Set the fixed size for the button
@@ -44,8 +44,16 @@ class CustomButton(QPushButton):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
 
+        # Determine the background color and text color based on the button state
+        if self.parent().currently_pressed_button == self:
+            background_color = QColor("#00B0C8")
+            text_color = QColor("white")
+        else:
+            background_color = QColor(self.color)
+            text_color = QColor("#acacac")
+
         # Draw the background of the button
-        painter.setBrush(QColor(self.color))
+        painter.setBrush(background_color)
         painter.setPen(Qt.NoPen)
         painter.drawPolygon(self.polygon)
 
@@ -56,11 +64,16 @@ class CustomButton(QPushButton):
         painter.drawPolygon(self.polygon)
 
         # Draw the text with the Predator font if available
-        pen = QPen(QColor("#acacac"))
+        pen = QPen(text_color)
         painter.setPen(pen)
         if self.predator_font:
             painter.setFont(self.predator_font)
         painter.drawText(self.rect(), Qt.AlignCenter, self.text())
+
+    def mousePressEvent(self, event):
+        super().mousePressEvent(event)
+        # Inform the panel that this button is pressed
+        self.parent().setCurrentButton(self)
 
 class CustomButtonPanel(QWidget):
     def __init__(self, parent=None):
@@ -68,6 +81,9 @@ class CustomButtonPanel(QWidget):
         self.setFixedSize(200, 400)  # Adjust the size of the main window as needed
         self.setGeometry(100, 200, 400, 400)
         self.setAttribute(Qt.WA_TranslucentBackground) # Make the background transparent
+
+        # Initialize the currently pressed button
+        self.currently_pressed_button = None
 
         # Set up a layout for the panel with zero spacing
         layout = QVBoxLayout()
@@ -81,8 +97,8 @@ class CustomButtonPanel(QWidget):
             {
                 'text': 'Welcome',
                 'points': [
-                    QPoint(200, 20),
-                    QPoint(200, 80),
+                    QPoint(300, 20),
+                    QPoint(300, 80),
                     QPoint(0, 80),
                     QPoint(0, 45),
                     QPoint(30, 20)
@@ -93,8 +109,8 @@ class CustomButtonPanel(QWidget):
             {
                 'text': 'Keybinding',
                 'points': [
-                    QPoint(200, 20),
-                    QPoint(200, 80),
+                    QPoint(300, 20),
+                    QPoint(300, 80),
                     QPoint(0, 80),
                     QPoint(0, 45),
                     QPoint(30, 20)
@@ -105,8 +121,8 @@ class CustomButtonPanel(QWidget):
             {
                 'text': 'Tips',
                 'points': [
-                    QPoint(200, 20),
-                    QPoint(200, 80),
+                    QPoint(300, 20),
+                    QPoint(300, 80),
                     QPoint(0, 80),
                     QPoint(0, 45),
                     QPoint(30, 20)
@@ -117,8 +133,8 @@ class CustomButtonPanel(QWidget):
             {
                 'text': 'Setting',
                 'points': [
-                    QPoint(200, 20),
-                    QPoint(200, 80),
+                    QPoint(300, 20),
+                    QPoint(300, 80),
                     QPoint(0, 80),
                     QPoint(0, 45),
                     QPoint(30, 20)
@@ -129,8 +145,8 @@ class CustomButtonPanel(QWidget):
             {
                 'text': 'Developers',
                 'points': [
-                    QPoint(200, 20),
-                    QPoint(200, 80),
+                    QPoint(300, 20),
+                    QPoint(300, 80),
                     QPoint(0, 80),
                     QPoint(0, 45),
                     QPoint(30, 20)
@@ -152,10 +168,9 @@ class CustomButtonPanel(QWidget):
             # Add the button to the layout
             self.layout().addWidget(button)
 
+    def setCurrentButton(self, button):
+        if self.currently_pressed_button:
+            self.currently_pressed_button.update()
+        self.currently_pressed_button = button
+        self.currently_pressed_button.update()
 
-# Main application setup
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = CustomButtonPanel()
-    window.show()
-    sys.exit(app.exec_())

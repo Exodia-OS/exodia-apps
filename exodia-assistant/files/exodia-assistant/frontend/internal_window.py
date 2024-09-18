@@ -1,6 +1,15 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QPainter, QColor, QBrush, QRegion, QPolygon, QPen  # Corrected import for QPolygon
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QWidget, QLabel
 
 class InternalWindow(QWidget):
     def __init__(self, parent=None):
@@ -10,6 +19,10 @@ class InternalWindow(QWidget):
         self.setGeometry(300, 100, 1140, 640)
         self.setAttribute(Qt.WA_TranslucentBackground)  # Make the background transparent
         self.polygon = self.createCustomMask()  # Store the polygon used for the mask
+        self.content_label = QLabel(self)
+        self.content_label.setGeometry(self.rect())
+        self.content_label.setStyleSheet("color: white; font-size: 20px; padding: 10px;")
+
 
     def createCustomMask(self):
         # Define points for an 8-sided polygon
@@ -38,6 +51,9 @@ class InternalWindow(QWidget):
         painter.drawPolygon(self.polygon)  # Draw the filled polygon
 
         # Draw the border with the specified color
-        pen = QPen(QColor("#00B0C8"), 3)  # Create a pen with the desired color and border width
+        pen = QPen(QColor("#00B0C8"), 5)  # Create a pen with the desired color and border width
         painter.setPen(pen)
         painter.drawPolygon(self.polygon)  # Draw the polygon border
+
+    def updateContent(self, text):
+        self.content_label.setText(text)
