@@ -13,9 +13,11 @@ from PyQt5.QtGui import QPainter, QBrush, QPolygon, QColor, QRegion, QFont, QFon
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QWidget, QApplication
 from frontend.internal_window import InternalWindow
 from frontend.add_logo import AddLogo
+from frontend.custom_button import CustomButton  # Import the button panel
 from frontend.custom_button import CustomButtonPanel  # Import the button panel
 from Xlib import X, display
 from Xlib.Xatom import STRING
+from frontend.buttons_content import ButtonContent  # Import the ButtonContent class
 
 # Function to set WM_CLASS for the window
 def set_wm_class(win_id, instance_name, class_name):
@@ -30,7 +32,6 @@ def set_wm_class(win_id, instance_name, class_name):
 # Function to create a mask for the custom window shape
 def createMask():
     points = [
-        QPoint(750, 0),      # Top center, 0
         QPoint(1450, 0),     # Top right corner, 1
         QPoint(1500, 50),    # Right top-middle, a bit down, 2
         QPoint(1500, 800),   # Bottom right corner, 3
@@ -60,6 +61,7 @@ class CustomShapeWindow(QMainWindow):
         self.predator_font = None
         self.button_font = None
         self.logo_pixmap = None
+        self.button_content = None
         self.initUI()
 
     def initUI(self):
@@ -87,6 +89,8 @@ class CustomShapeWindow(QMainWindow):
         self.addButtonPanel()  # Call function to add button panel
         # Set WM_CLASS after the window is shown
         self.set_wm_class()
+        # Initialize ButtonContent
+        self.button_content = ButtonContent(self.internal_window)
 
     # Set the WM_CLASS property with instance and class names
     def set_wm_class(self):
@@ -126,17 +130,23 @@ class CustomShapeWindow(QMainWindow):
 
         # Create the buttons
         self.settings_button = QPushButton('⚙', button_widget)
-        self.settings_button.setGeometry(0, 0, 40, 40)
+        # Set the geometry (position and size) of the internal window
+        # self.setGeometry(x, y, width, height)
+        self.settings_button.setGeometry(0, 10, 40, 40)
         self.settings_button.clicked.connect(openSettings)
         self.settings_button.setFont(self.button_font)
 
         self.minimize_button = QPushButton('—', button_widget)
-        self.minimize_button.setGeometry(50, 0, 40, 40)
+        # Set the geometry (position and size) of the internal window
+        # self.setGeometry(x, y, width, height)
+        self.minimize_button.setGeometry(50, 10, 40, 40)
         self.minimize_button.clicked.connect(self.minimizeWindow)
         self.minimize_button.setFont(self.button_font)
 
         self.close_button = QPushButton('X', button_widget)
-        self.close_button.setGeometry(100, 0, 40, 40)
+        # Set the geometry (position and size) of the internal window
+        # self.setGeometry(x, y, width, height)
+        self.close_button.setGeometry(100, 10, 40, 40)
         self.close_button.clicked.connect(self.closeWindow)
         self.close_button.setFont(self.button_font)
 
@@ -158,6 +168,21 @@ class CustomShapeWindow(QMainWindow):
     def closeWindow(self):
         self.close()
 
+    def displayWelcomeContent(self):
+        self.button_content.displayWelcomeContent()  # Call the method from ButtonContent
+
+    def displayKeybindingContent(self):
+        self.button_content.displayKeybindingContent() # Call the method from ButtonContent
+
+    def displayTipsContent(self):
+        self.button_content.displayTipsContent() # Call the method from ButtonContent
+
+    def displaySettingContent(self):
+        self.button_content.displaySettingContent() # Call the method from ButtonContent
+
+    def displayDevelopersContent(self):
+        self.button_content.displayDevelopersContent() # Call the method from ButtonContent
+
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
@@ -174,25 +199,50 @@ class CustomShapeWindow(QMainWindow):
         if hasattr(self, 'predator_font'):
             painter.setFont(self.predator_font)
 
+        # Define the polygon for the outer border
+        border_points = [
+                QPoint(750, 0),      # Top center
+                QPoint(1450, 0),     # Top right corner
+                QPoint(1500, 50),    # Right top-middle
+                QPoint(1500, 800),   # Bottom right corner
+                QPoint(1500, 800),   # Bottom right-middle
+                QPoint(50, 800),     # Bottom left-middle
+                QPoint(0, 750),      # Bottom left corner
+                QPoint(0, 0),       # Left top-middle
+                QPoint(0, 0)        # Top left corner
+            ]
+        border_polygon = QPolygon(border_points)
+
+        # Draw the outer border of the main window
+        border_pen = QPen(QColor("#121212"))  # Set the border color
+        border_pen.setWidth(10)  # Set the border width
+        painter.setPen(border_pen)
+        painter.drawPolygon(border_polygon)  # Draw the border polygon
+
         # Create a QPainterPath for the inverted trapezoid background
         path = QPainterPath()
-        path.moveTo(self.width() / 2 - 320, 0)
-        path.lineTo(self.width() / 2 + 320, 0)
+        path.moveTo(self.width() / 2 - 320, 5)
+        path.lineTo(self.width() / 2 + 320, 5)
         path.lineTo(self.width() / 2 + 220, 70)
         path.lineTo(self.width() / 2 - 220, 70)
         path.closeSubpath()
 
         # Create a gradient from "#141414" to "#0D0D0D"
         gradient = QLinearGradient(self.width() / 2 - 200, 0, self.width() / 2 - 200, 70)
-        gradient.setColorAt(0, QColor("#141414"))
-        gradient.setColorAt(1, QColor("#0D0D0D"))
+        gradient.setColorAt(0, QColor("#121212"))
+        gradient.setColorAt(1, QColor("#121212"))
 
         # Set the gradient brush for the trapezoid background
         painter.setBrush(QBrush(gradient))
         painter.drawPath(path)
 
-        # Set the border for the trapezoid
+        # Set the 1st border for the trapezoid
         # border_pen = QPen(QColor("#00B0C8"), 3)  # Create a pen with border color and width
+        # painter.setPen(border_pen)
+        # painter.drawPath(path)  # Draw the trapezoid border
+
+        # Set the 2nd border for the trapezoid
+        # border_pen = QPen(QColor("#121212"), 2)  # Create a pen with border color and width
         # painter.setPen(border_pen)
         # painter.drawPath(path)  # Draw the trapezoid border
 

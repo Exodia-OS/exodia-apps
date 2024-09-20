@@ -14,23 +14,22 @@ from PyQt5.QtGui import QPainter, QColor, QRegion, QPolygon, QPen, QFont, QFontD
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 
 class CustomButton(QPushButton):
-    def __init__(self, text, points, x, y, width, height, color="#121212", border_color="#00B0C8", border_thickness=5, parent=None):
+    def __init__(self, text, points, x, y, width, height, callback, color="#121212", border_color="#00B0C8", border_thickness=5, parent=None):
         super().__init__(text, parent)
-        self.predator_font = None
-        self.setFixedSize(200, 100)  # Set the fixed size for the button
+        self.callback = callback  # Store the callback function
+
+        self.setFixedSize(200, 100)
         self.polygon = QPolygon(points)
         self.color = color
         self.border_color = border_color
         self.border_thickness = border_thickness
-        self.setGeometry(QRect(x, y, width, height))  # Set the geometry of the button
-        self.setAttribute(Qt.WA_TranslucentBackground)  # Make the button background transparent
-        self.setMask(QRegion(self.polygon))  # Apply the mask to create the custom shape
+        self.setGeometry(QRect(x, y, width, height))
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setMask(QRegion(self.polygon))
 
-        # Load custom fonts
         self.loadPredatorFont()
 
     def loadPredatorFont(self):
-        # Load the font from the Fonts directory
         font_path = os.path.join(os.path.dirname(__file__), '../Fonts', 'Squares-Bold.otf')
         font_id = QFontDatabase.addApplicationFont(font_path)
         if font_id == -1:
@@ -40,11 +39,9 @@ class CustomButton(QPushButton):
             self.predator_font = QFont(font_family, 12, QFont.Bold)
 
     def paintEvent(self, event):
-        # Handle custom painting of the button
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
 
-        # Determine the background color and text color based on the button state
         if self.parent().currently_pressed_button == self:
             background_color = QColor("#00B0C8")
             text_color = QColor("white")
@@ -52,18 +49,15 @@ class CustomButton(QPushButton):
             background_color = QColor(self.color)
             text_color = QColor("#acacac")
 
-        # Draw the background of the button
         painter.setBrush(background_color)
         painter.setPen(Qt.NoPen)
         painter.drawPolygon(self.polygon)
 
-        # Draw the border of the button
         pen = QPen(QColor(self.border_color))
         pen.setWidth(self.border_thickness)
         painter.setPen(pen)
         painter.drawPolygon(self.polygon)
 
-        # Draw the text with the Predator font if available
         pen = QPen(text_color)
         painter.setPen(pen)
         if self.predator_font:
@@ -72,13 +66,17 @@ class CustomButton(QPushButton):
 
     def mousePressEvent(self, event):
         super().mousePressEvent(event)
-        # Inform the panel that this button is pressed
+        self.callback()  # Trigger the callback when the button is clicked
         self.parent().setCurrentButton(self)
+
 
 class CustomButtonPanel(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
+        # self.setFixedSize(width, height)
         self.setFixedSize(200, 400)  # Adjust the size of the main window as needed
+        # Set the geometry (position and size) of the internal window
+        # self.setGeometry(x, y, width, height)
         self.setGeometry(100, 200, 400, 400)
         self.setAttribute(Qt.WA_TranslucentBackground) # Make the background transparent
 
@@ -103,7 +101,8 @@ class CustomButtonPanel(QWidget):
                     QPoint(0, 45),
                     QPoint(30, 20)
                 ],
-                'x': 50, 'y': 50, 'width': 200, 'height': 100
+                'x': 50, 'y': 50, 'width': 200, 'height': 100,
+                'callback': parent.displayWelcomeContent  # Set the callback function
             },
             # Keybinding Button
             {
@@ -115,7 +114,8 @@ class CustomButtonPanel(QWidget):
                     QPoint(0, 45),
                     QPoint(30, 20)
                 ],
-                'x': 50, 'y': 160, 'width': 200, 'height': 100
+                'x': 50, 'y': 160, 'width': 200, 'height': 100,
+                'callback': parent.displayKeybindingContent
             },
             # Tips Button
             {
@@ -127,7 +127,8 @@ class CustomButtonPanel(QWidget):
                     QPoint(0, 45),
                     QPoint(30, 20)
                 ],
-                'x': 50, 'y': 270, 'width': 200, 'height': 100
+                'x': 50, 'y': 270, 'width': 200, 'height': 100,
+                'callback': parent.displayTipsContent
             },
             # Setting Button
             {
@@ -139,7 +140,8 @@ class CustomButtonPanel(QWidget):
                     QPoint(0, 45),
                     QPoint(30, 20)
                 ],
-                'x': 50, 'y': 380, 'width': 200, 'height': 100
+                'x': 50, 'y': 380, 'width': 200, 'height': 100,
+                'callback': parent.displaySettingContent
             },
             # Developers Button
             {
@@ -151,7 +153,8 @@ class CustomButtonPanel(QWidget):
                     QPoint(0, 45),
                     QPoint(30, 20)
                 ],
-                'x': 50, 'y': 490, 'width': 200, 'height': 100
+                'x': 50, 'y': 490, 'width': 200, 'height': 100,
+                'callback': parent.displayDevelopersContent
             }
         ]
 
@@ -163,7 +166,8 @@ class CustomButtonPanel(QWidget):
                 x=config['x'],
                 y=config['y'],
                 width=config['width'],
-                height=config['height']
+                height=config['height'],
+                callback=config['callback']
             )
             # Add the button to the layout
             self.layout().addWidget(button)
@@ -173,4 +177,3 @@ class CustomButtonPanel(QWidget):
             self.currently_pressed_button.update()
         self.currently_pressed_button = button
         self.currently_pressed_button.update()
-

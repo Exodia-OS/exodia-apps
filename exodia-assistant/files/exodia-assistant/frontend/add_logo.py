@@ -16,7 +16,9 @@ from PyQt5.QtGui import QPainterPath
 class AddLogo(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setGeometry(30, 30, 150, 150)
+        # Set the geometry (position and size) of the internal window
+        # self.setGeometry(x, y, width, height)
+        self.setGeometry(30, 20, 150, 150)
         self.setAttribute(Qt.WA_TranslucentBackground)  # Make the background transparent
         self.radius = min(self.width(), self.height()) // 2
         self.image_path = os.path.expanduser("~/.face")  # Expand the tilde to the full path

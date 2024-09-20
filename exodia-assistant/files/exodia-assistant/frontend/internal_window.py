@@ -9,7 +9,10 @@
 
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QPainter, QColor, QBrush, QRegion, QPolygon, QPen  # Corrected import for QPolygon
-from PyQt5.QtWidgets import QWidget, QLabel
+from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout
+
+from frontend.buttons.welcome_button import WelcomeButton
+from frontend.buttons.setting_button import SettingButton
 
 class InternalWindow(QWidget):
     def __init__(self, parent=None):
@@ -22,7 +25,6 @@ class InternalWindow(QWidget):
         self.content_label = QLabel(self)
         self.content_label.setGeometry(self.rect())
         self.content_label.setStyleSheet("color: white; font-size: 20px; padding: 10px;")
-
 
     def createCustomMask(self):
         # Define points for an 8-sided polygon
@@ -56,4 +58,5 @@ class InternalWindow(QWidget):
         painter.drawPolygon(self.polygon)  # Draw the polygon border
 
     def updateContent(self, text):
-        self.content_label.setText(text)
+        # Assuming you have a QLabel or QTextEdit in the window to display content
+        self.content_label.setText(text)  # Update the label with the provided text
