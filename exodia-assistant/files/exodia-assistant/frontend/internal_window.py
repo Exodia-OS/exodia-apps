@@ -9,7 +9,7 @@
 
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QPainter, QColor, QBrush, QRegion, QPolygon, QPen  # Corrected import for QPolygon
-from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout, QScrollArea
 
 from frontend.buttons.welcome_button import WelcomeButton
 from frontend.buttons.setting_button import SettingButton
@@ -25,6 +25,49 @@ class InternalWindow(QWidget):
         self.content_label = QLabel(self)
         self.content_label.setGeometry(self.rect())
         self.content_label.setStyleSheet("color: white; font-size: 20px; padding: 10px;")
+
+        # Create the scroll area
+        scroll_area = QScrollArea(self)
+        scroll_area.setGeometry(20, 20, 1100, 600)  # Set scroll area size within the internal window
+        # scroll_area.setGeometry(self.rect())  # Set the scroll area to the full size of the window
+        scroll_area.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        scroll_area.setWidgetResizable(True)  # Ensure the content resizes with the window
+
+        # Create a widget to hold the content (which will be scrollable)
+        scroll_content = QWidget()
+        scroll_content.setStyleSheet("background-color: #121212;")  # Transparent background for content
+        scroll_area.setWidget(scroll_content)
+
+        # Create a layout for the scrollable content
+        layout = QVBoxLayout(scroll_content)
+
+        # Content label that will be scrollable
+        self.content_label = QLabel(scroll_content)
+        self.content_label.setStyleSheet("color: #121212; font-size: 20px; padding: 10px;")
+        self.content_label.setWordWrap(True)  # Allow the text to wrap
+
+        layout.addWidget(self.content_label)  # Add the label to the layout
+
+        # Remove border and customize scroll bar colors
+        scroll_area.setStyleSheet("""
+            QScrollArea { border: none; }
+            QScrollBar:vertical {
+                background: #222;  /* Background color of the vertical scrollbar */
+                width: 10px;       /* Width of the scrollbar */
+                margin: 0 0 0 0;   /* Margin around the scrollbar */
+            }
+            QScrollBar::handle:vertical {
+                background: #00B0C8;  /* Color of the scrollbar handle */
+                border-radius: 5px;    /* Rounded corners for the scrollbar handle */
+            }
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                background: none;      /* Hide the add and subtract buttons */
+            }
+            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+                background: none;      /* Hide the add and subtract page areas */
+            }
+        """)
 
     def createCustomMask(self):
         # Define points for an 8-sided polygon
