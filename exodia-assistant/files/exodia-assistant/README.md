@@ -2,6 +2,7 @@
 
 The New GUI App Of Exodia OS Assistant
 
+
 ![](./preview.png)
 
 Install dependencies
