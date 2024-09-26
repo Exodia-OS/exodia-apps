@@ -18,27 +18,21 @@ class SettingWindow(QMainWindow):
         self.toggle_button = None
         self.is_auto_start = None
         self.custom_font = None
+        self.config_path = os.path.expanduser('~/.config/bspwm/exodia.conf')  # Path to the config file
         self.initUI()
 
     def initUI(self):
-        # Set the geometry (position and size) of the internal window
-        # self.setGeometry(x, y, width, height)
         self.setGeometry(300, 100, 1140, 640)
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
-        # Set custom mask for the non-rectangular window shape
         self.setMask(self.createMask())
-
-        # Set the custom font for the window
         self.loadCustomFont()
-
-        # Add the toggle button
+        self.loadAutoStartStatus()  # Load the current auto-start status
         self.addToggleButton()
 
     @staticmethod
     def createMask():
-        # Define the custom shape using points
         points = [
             QPoint(910, 100),   # Top center, 1 (Reduced width)
             QPoint(940, 130),  # Top right, 2
@@ -51,7 +45,6 @@ class SettingWindow(QMainWindow):
         return QRegion(polygon)
 
     def loadCustomFont(self):
-        # Load the font from the Fonts directory
         font_path = os.path.join(os.path.dirname(__file__), '../Fonts', 'Squares-Bold.otf')
         font_id = QFontDatabase.addApplicationFont(font_path)
         if font_id == -1:
@@ -60,17 +53,39 @@ class SettingWindow(QMainWindow):
             font_family = QFontDatabase.applicationFontFamilies(font_id)[0]
             self.custom_font = QFont(font_family, 20, QFont.Bold)
 
+    def loadAutoStartStatus(self):
+        # Load the auto-start status from the configuration file
+        if os.path.exists(self.config_path):
+            with open(self.config_path, 'r') as config_file:
+                for line in config_file:
+                    if 'exodia-assistant-auto-start' in line:
+                        self.is_auto_start = line.split('=')[1].strip().lower() == 'true'
+                        break
+        else:
+            self.is_auto_start = False  # Default to false if the file does not exist
+
     def addToggleButton(self):
-        # Create the toggle button
-        self.toggle_button = QPushButton('OFF', self)
+        self.toggle_button = QPushButton('', self)  # Initialize without text
         self.toggle_button.setGeometry(450, 200, 240, 100)
         self.updateToggleButtonStyle()
 
-        # Connect the button to toggle the state
+        # Set non-rectangular shape
+        self.toggle_button.setMask(self.createButtonMask())
         self.toggle_button.clicked.connect(self.toggleAutoStart)
 
+    def createButtonMask(self):
+        button_points = [
+            QPoint(200, 0),        # Top right, 1
+            QPoint(240, 50),       # Bottom right (adjusted height), 2
+            QPoint(200, 100),      # Bottom right curve, 3
+            QPoint(40, 100),      # Bottom left curve, 4
+            QPoint(0, 50),         # Bottom left, 5
+            QPoint(40, 0),        # Top left, 6
+        ]
+        polygon = QPolygon(button_points)
+        return QRegion(polygon)
+
     def updateToggleButtonStyle(self):
-        # Update button appearance based on state
         if self.is_auto_start:
             self.toggle_button.setText('ON')
             self.toggle_button.setStyleSheet("""
@@ -79,26 +94,43 @@ class SettingWindow(QMainWindow):
                     color: white;
                     font-size: 24px;
                     font-weight: bold;
-                    border-radius: 50px;
+                    border-radius: 30px;  /* Rounded corners */
                 }
             """)
         else:
             self.toggle_button.setText('OFF')
             self.toggle_button.setStyleSheet("""
                 QPushButton {
-                    background-color: #FF5F56;
+                    background-color: #121212;
                     color: white;
                     font-size: 24px;
                     font-weight: bold;
-                    border-radius: 50px;
+                    border-radius: 30px;  /* Rounded corners */
                 }
             """)
 
     def toggleAutoStart(self):
-        # Toggle the auto-start state
+        # Toggle the auto-start state and update the button style
         self.is_auto_start = not self.is_auto_start
         self.updateToggleButtonStyle()
+        self.saveAutoStartStatus()  # Save the updated status to the configuration file
 
+    def saveAutoStartStatus(self):
+        # Save the auto-start status to the configuration file
+        if os.path.exists(self.config_path):
+            with open(self.config_path, 'r') as config_file:
+                lines = config_file.readlines()
+
+            with open(self.config_path, 'w') as config_file:
+                for line in lines:
+                    if 'exodia-assistant-auto-start' in line:
+                        # Update the line with the new status
+                        line = f'exodia-assistant-auto-start = {"true" if self.is_auto_start else "false"}\n'
+                    config_file.write(line)
+        else:
+            # If the file doesn't exist, create it and set the value
+            with open(self.config_path, 'w') as config_file:
+                config_file.write(f'exodia-assistant-auto-start = {"true" if self.is_auto_start else "false"}\n')
 
     def paintEvent(self, event):
         painter = QPainter(self)
@@ -109,8 +141,6 @@ class SettingWindow(QMainWindow):
         painter.drawRect(self.rect())
 
         # Draw the border with color #00B0C8 and width 5
-
-        # Define the polygon for the outer border
         border_points = [
             QPoint(910, 100),   # Top center, 1 (Reduced width)
             QPoint(940, 130),  # Top right, 2
