@@ -18,6 +18,7 @@ from frontend.custom_button import CustomButtonPanel  # Import the button panel
 from Xlib import X, display
 from Xlib.Xatom import STRING
 from frontend.buttons_content import ButtonContent  # Import the ButtonContent class
+from frontend.button_setting import SettingWindow
 
 # Function to set WM_CLASS for the window
 def set_wm_class(win_id, instance_name, class_name):
@@ -35,18 +36,12 @@ def createMask():
         QPoint(1450, 0),     # Top right corner, 1
         QPoint(1500, 50),    # Right top-middle, a bit down, 2
         QPoint(1500, 800),   # Bottom right corner, 3
-        QPoint(1500, 800),   # Bottom right-middle, 4
-        QPoint(50, 800),     # Bottom left-middle, 7
-        QPoint(0, 750),      # Bottom left corner, 8
-        QPoint(0, 0),       # Left top-middle, a bit down, 9
-        QPoint(0, 0)        # Top left corner, 10
+        QPoint(50, 800),     # Bottom left-middle, 4
+        QPoint(0, 750),      # Bottom left corner, 5
+        QPoint(0, 0)        # Top left corner, 6
     ]
     polygon = QPolygon(points)
     return QRegion(polygon)
-
-# Function to handle settings button click
-def openSettings():
-    print("Settings button clicked.")
 
 # Main CustomShapeWindow class
 class CustomShapeWindow(QMainWindow):
@@ -62,6 +57,7 @@ class CustomShapeWindow(QMainWindow):
         self.button_font = None
         self.logo_pixmap = None
         self.button_content = None
+        self.setting_window = None  # Initialize the setting window variable
         self.initUI()
 
     def initUI(self):
@@ -93,6 +89,8 @@ class CustomShapeWindow(QMainWindow):
         self.button_content = ButtonContent(self.internal_window)
         # Display the welcome content when the app opens
         self.displayWelcomeContent()
+        # Set window size and other configurations...
+        self.addButtons()
 
     # Set the WM_CLASS property with instance and class names
     def set_wm_class(self):
@@ -100,6 +98,15 @@ class CustomShapeWindow(QMainWindow):
         # Get the native window ID
         win_id = self.winId().__int__()
         set_wm_class(win_id, "exodiaos-assistant", "ExodiaOS Assistant")
+
+    # Function to handle settings button click
+    def openSettings(self):
+        try:
+            self.setting_window = SettingWindow(self)
+            self.setting_window.show()
+        except Exception as e:
+            print(f"Error initializing SettingWindow: {e}")
+
 
     def loadPredatorFont(self):
 
@@ -135,7 +142,7 @@ class CustomShapeWindow(QMainWindow):
         # Set the geometry (position and size) of the internal window
         # self.setGeometry(x, y, width, height)
         self.settings_button.setGeometry(0, 10, 40, 40)
-        self.settings_button.clicked.connect(openSettings)
+        self.settings_button.clicked.connect(self.openSettings) # Connect button to openSettings method
         self.settings_button.setFont(self.button_font)
 
         self.minimize_button = QPushButton('—', button_widget)
@@ -203,15 +210,12 @@ class CustomShapeWindow(QMainWindow):
 
         # Define the polygon for the outer border
         border_points = [
-                QPoint(750, 0),      # Top center
-                QPoint(1450, 0),     # Top right corner
-                QPoint(1500, 50),    # Right top-middle
-                QPoint(1500, 800),   # Bottom right corner
-                QPoint(1500, 800),   # Bottom right-middle
-                QPoint(50, 800),     # Bottom left-middle
-                QPoint(0, 750),      # Bottom left corner
-                QPoint(0, 0),       # Left top-middle
-                QPoint(0, 0)        # Top left corner
+            QPoint(1450, 0),     # Top right corner, 1
+            QPoint(1500, 50),    # Right top-middle, a bit down, 2
+            QPoint(1500, 800),   # Bottom right corner, 3
+            QPoint(50, 800),     # Bottom left-middle, 4
+            QPoint(0, 750),      # Bottom left corner, 5
+            QPoint(0, 0)        # Top left corner, 6
             ]
         border_polygon = QPolygon(border_points)
 

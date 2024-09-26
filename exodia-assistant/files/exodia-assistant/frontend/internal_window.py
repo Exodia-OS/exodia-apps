@@ -75,11 +75,9 @@ class InternalWindow(QWidget):
             QPoint(1110, 0),   # Top center, 1
             QPoint(1140, 30),  # Top right, 2
             QPoint(1140, 640), # Middle right, 3
-            QPoint(1140, 640), # Bottom right, 4
-            QPoint(30, 640),   # Bottom center, 5
-            QPoint(0, 610),    # Bottom left, 6
-            QPoint(0, 0),     # Middle left, 7
-            QPoint(0, 0)      # Top left, 8
+            QPoint(30, 640),   # Bottom center, 4
+            QPoint(0, 610),    # Bottom left, 5
+            QPoint(0, 0)     # Middle left, 6
         ]
 
         polygon = QPolygon(points)
