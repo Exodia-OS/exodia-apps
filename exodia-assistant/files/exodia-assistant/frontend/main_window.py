@@ -91,6 +91,8 @@ class CustomShapeWindow(QMainWindow):
         self.set_wm_class()
         # Initialize ButtonContent
         self.button_content = ButtonContent(self.internal_window)
+        # Display the welcome content when the app opens
+        self.displayWelcomeContent()
 
     # Set the WM_CLASS property with instance and class names
     def set_wm_class(self):

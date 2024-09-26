@@ -30,7 +30,7 @@ class ButtonContent:
         welcome_text = """
         
             <div style="text-align: center; padding: 20px;">
-                <img src="icons/exodia-cyan.png" border="0" width="120" style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="icons/exodia-cyan.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <div style="font-family: {}; color: #00B0C8; line-height: 1.6; font-size: 18px; max-width: 800px; margin: auto; padding: 0 20px;">
@@ -166,6 +166,26 @@ class ButtonContent:
                     </li>
                 
                 </ul>
+                
+                <h2 style="color: #00C8B0; font-size: 28px; margin-top: 30px;">Showcases:</h2>
+                
+                <div style="text-align: left; padding: 20px;">
+                    
+                    <img src="imgs/Showcase/1.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <br/>
+                    <img src="imgs/Showcase/2.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <br/>
+                    <img src="imgs/Showcase/3.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <br/>
+                    <img src="imgs/Showcase/4.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <br/>
+                    <img src="imgs/Showcase/5.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <br/>
+                    <img src="imgs/Showcase/6.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <br/>
+                    <img src="imgs/Showcase/7.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    
+                </div>
             
             </div>
     """.format(self.predator_font.family())  # Use the custom font family
@@ -175,7 +195,87 @@ class ButtonContent:
         keybinding_text = """
         <div style="font-family: {}; color: #00B0C8; line-height: 1.6; font-size: 18px; max-width: 800px; margin: auto; padding: 0 20px;">
                 
-                <h1 style="color: #00C8B0; font-size: 32px; margin-bottom: 15px;">Keybinding Overview</h1>
+                <h1 style="color: #00C8B0; font-size: 32px; margin-bottom: 15px;">Keybinding</h1>
+                
+                <p style="font-size: 20px">
+                    Keybinding refers to the practice of assigning keyboard shortcuts to various actions or commands within the window manager environment. These shortcuts allow users to perform tasks such as opening applications, switching between windows, resizing or moving windows, and executing specific commands, all without needing to use the mouse or navigate through menus.
+                </p>
+                
+                <br/>
+                
+                <p style="font-size: 20px">
+                    Keybinding is highly customizable and can be tailored to suit individual preferences and workflows. Users typically define keybindings in configuration files specific to their chosen window manager, such as:
+                </p>
+                
+                <br/>
+                
+                <h5 style="color: #FFFFFF;">  <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/bspwm/keybinding/sxhkdrc</code> For <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">BSPWM</code></h5>
+                <h5 style="color: #FFFFFF;">  <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/i3/config</code> For <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">I3WM</code></h5>
+                <h5 style="color: #FFFFFF;">  <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">/opt/exodia/dwm/config.def.h</code> For <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">DWM</code></h5>
+                
+                <br/>
+                
+                <div style="text-align: left; padding: 20px;">
+                    <img src="imgs/Keybinding/Note.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                </div>
+                
+                <br/>
+                
+                <div style="background-color: #00B0C8;"></div>
+                
+                <br/>
+                
+                <h2 align="center" >Bspwm</h2>
+                
+                <h5 style="color: #FFFFFF;">Install</h5>
+                <h5 style="color: #FFFFFF;"> For Home Edition <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">install exodia-bspwm</code></h5>
+                <h5 style="color: #FFFFFF;"> For Predator Edition <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">install exodia-bspwm-predator</code> </h5>
+                <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">mod</code> Is <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">super</code> (window key) </h5>
+                
+                <br/>
+                
+                <div style="text-align: left; padding: 20px;">
+                    <img src="imgs/Keybinding/bspwm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                </div>
+                
+                <br/>
+                
+                <div style="background-color: #00B0C8;"></div>
+                
+                <br/>
+                
+                <h2 align="center" >I3WM</h2>
+                
+                <h5 style="color: #FFFFFF;">Install</h5>
+                <h5 style="color: #FFFFFF;"> For Home Edition <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">install exodia-i3wm</code></h5>
+                <h5 style="color: #FFFFFF;"> For Predator Edition <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">install exodia-i3wm-predator</code> </h5>
+                <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">mod</code> Is <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">super</code> (window key) </h5>
+                
+                <br/>
+                
+                <div style="text-align: left; padding: 20px;">
+                    <img src="imgs/Keybinding/i3wm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                </div>
+                
+                <br/>
+                
+                <div style="background-color: #00B0C8;"></div>
+                
+                <br/>
+                
+                <h2 align="center" >DWM</h2>
+                
+                <h5 style="color: #FFFFFF;">Install</h5>
+                <h5 style="color: #FFFFFF;"> For Home Edition <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">install exodia-dwm</code></h5>
+                <h5 style="color: #FFFFFF;"> For Predator Edition <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">install exodia-dwm-predator</code> </h5>
+                <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">mod</code> Is <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">super</code> (window key) </h5>
+                
+                <br/>
+                
+                <div style="text-align: left; padding: 20px;">
+                    <img src="imgs/Keybinding/dwm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                </div>
+                
                 
             </div>
         """.format(self.predator_font.family())
@@ -183,13 +283,573 @@ class ButtonContent:
 
     def displayTipsContent(self):
         tips_text = """
-        <div style="font-family: {}; color: #00B0C8; line-height: 1.6; font-size: 18px; max-width: 800px; margin: auto; padding: 0 20px;">
-                
-                <h1 style="color: #00C8B0; font-size: 32px; margin-bottom: 15px;">Tips Overview</h1>
-                
+    <div style="font-family: {}; color: #00B0C8; line-height: 1.6; font-size: 18px; max-width: 800px; margin: auto; padding: 0 20px;">
+    
+        <!-- PGP signature Error -->
+        <table style="margin: 20px 0;">
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h1 style="color: #FFFFFF; font-size: 32px; margin-bottom: 15px;">PGP signature Error</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h5 style="color: #00B0C8; font-size: 32px; margin-bottom: 15px;">April 5, 2024 · One min read</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin: 20px 0;">
+            <tr>
+                <!-- Image Cell -->
+                <td style="text-align: left; vertical-align: top;">
+                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                </td>
+    
+                <!-- Text Cells -->
+                <td style="padding-left: 20px; vertical-align: top;">
+                    <h4 style="color: #00C8B0; font-size: 15px; margin: 0;">Mahmoud Mohammed</h4>
+                    <h5 style="color: #FFFFFF; font-size: 15px; margin-top: 10px;">Team Leader, Core Dev, Release Manager, Package Maintainer</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <br/>
+        
+        <!-- PGP Error Resolution Instructions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+            
+            <h5 style="color: #FFFFFF;">If you get <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">invalid or corrupted package (PGP signature) error</code>, open up the terminal and do:</h5>
+        
+        </div>
+        
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+            <h5 style="color: #FFFFFF;">  <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">sudo pacman -S archlinux-keyring</code> </h5>
+            <h5 style="color: #FFFFFF;">  <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">sudo pacman-key --init</code> </h5>
+            <h5 style="color: #FFFFFF;">  <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">sudo pacman-key --populate</code> </h5>
+        </div>
+        
+        <br/>
+        <h5 style="color: #FFFFFF;">Not resolved yet? Ok, try this: <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">yay -Syy archlinux-keyring</code> </h5>
+        
+        
+        
+        
+        <br/>
+        <div style="background-color: #00B0C8;"></div>
+        
+        
+        
+        <!-- Adding Music -->
+        <table style="margin: 20px 0;">
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h1 style="color: #FFFFFF; font-size: 32px; margin-bottom: 15px;">Adding Music</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h5 style="color: #00B0C8; font-size: 32px; margin-bottom: 15px;">April 5, 2024 · One min read</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin: 20px 0;">
+            <tr>
+                <!-- Image Cell -->
+                <td style="text-align: left; vertical-align: top;">
+                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                </td>
+    
+                <!-- Text Cells -->
+                <td style="padding-left: 20px; vertical-align: top;">
+                    <h4 style="color: #00C8B0; font-size: 15px; margin: 0;">Mahmoud Mohammed</h4>
+                    <h5 style="color: #FFFFFF; font-size: 15px; margin-top: 10px;">Team Leader, Core Dev, Release Manager, Package Maintainer</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <br/>
+        
+        <!-- Add Music Instructions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+            <h5 style="color: #FFFFFF;">you should add your music to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/Music</code> directory</h5>
+            <h5 style="color: #FFFFFF;"> Open up The Terminal and run <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">ncmpcpp</code> to open Song Browser</h5>
+            <h5 style="color: #FFFFFF;"> press <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">2</code> to open Song Browser</h5>
+            <h5 style="color: #FFFFFF;"> In browser tab, press <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">u</code> to update the Music Database</h5>
+            <h5 style="color: #FFFFFF;"> press <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">SPACE</code> to add the songs in your Playlist</h5>
+        </div>
+        
+        
+        
+        <br/>
+        <div style="background-color: #00B0C8;"></div>
+
+
+
+        <!-- Set keyboard Layout -->
+        <table style="margin: 20px 0;">
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h1 style="color: #FFFFFF; font-size: 32px; margin-bottom: 15px;">Set keyboard Layout</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h5 style="color: #00B0C8; font-size: 32px; margin-bottom: 15px;">April 5, 2024 · One min read</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin: 20px 0;">
+            <tr>
+                <!-- Image Cell -->
+                <td style="text-align: left; vertical-align: top;">
+                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                </td>
+    
+                <!-- Text Cells -->
+                <td style="padding-left: 20px; vertical-align: top;">
+                    <h4 style="color: #00C8B0; font-size: 15px; margin: 0;">Mahmoud Mohammed</h4>
+                    <h5 style="color: #FFFFFF; font-size: 15px; margin-top: 10px;">Team Leader, Core Dev, Release Manager, Package Maintainer</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <br/>
+        
+        <!-- PGP Error Resolution Instructions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+            <h5 style="color: #FFFFFF;"> edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/bspwm/exodia.conf</code></h5>
+            <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">nvim ~/.config/bspwm/exodia.conf</code></h5>
+            <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">keyboard-layouts</code> to update the Music Database</h5>
+            <h5 style="color: #FFFFFF;"> e.g ( <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">us,ara</code> )</h5>
+        </div>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/tips/keyboardLayouts/0.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <!-- older versions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+            <h4 style="color: #FFFFFF;">For <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">v2022.12</code>  Release or less</h4>
+            <br/>
+            <h5 style="color: #FFFFFF;"> edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">bspwmrc</code></h5>
+            <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">nvim ~/.config/bspwm/bspwmrc</code> </h5>
+            <h5 style="color: #FFFFFF;"> add these lines: </h5>
+            <h5 style="color: #FFFFFF;">    <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;"># ----- set keyboard Layout ----- #</code> </h5>
+            <h5 style="color: #FFFFFF;">    <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">setxkbmap -layout us,ar  # add 'us,ara'</code> </h5>
+            <h5 style="color: #FFFFFF;">    <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">setxkbmap -option 'grp:alt_shift_toggle'  # Alt+Shift -> switch layout #</code> </h5>
+            <h5 style="color: #FFFFFF;"> replace <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">us,ara</code> to your language</h5>
+
+        </div>
+        
+        
+        
+        <br/>
+        <div style="background-color: #00B0C8;"></div>
+
+
+
+        <!-- Changing SDDM user picture -->
+        <table style="margin: 20px 0;">
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h1 style="color: #FFFFFF; font-size: 32px; margin-bottom: 15px;">Changing SDDM user picture</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h5 style="color: #00B0C8; font-size: 32px; margin-bottom: 15px;">April 5, 2024 · One min read</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin: 20px 0;">
+            <tr>
+                <!-- Image Cell -->
+                <td style="text-align: left; vertical-align: top;">
+                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                </td>
+    
+                <!-- Text Cells -->
+                <td style="padding-left: 20px; vertical-align: top;">
+                    <h4 style="color: #00C8B0; font-size: 15px; margin: 0;">Mahmoud Mohammed</h4>
+                    <h5 style="color: #FFFFFF; font-size: 15px; margin-top: 10px;">Team Leader, Core Dev, Release Manager, Package Maintainer</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <br/>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/tips/sddm/0.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <!-- PGP Error Resolution Instructions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+            <h5 style="color: #FFFFFF;"> copy your pic to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">/usr/share/sddm/faces/</code></h5>
+            <h5 style="color: #FFFFFF;"> in my case my pic -> IMG.jpg <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">sudo cp IMG.jpg /usr/share/sddm/faces/</code> </h5>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/sddm/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
-        """.format(self.predator_font.family())
+            
+            <h5 style="color: #FFFFFF;"> set pic name to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">username.face.icon</code></h5>
+            <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">sudo mv IMG.jpg o0xwolf.face.icon</code></h5>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/sddm/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/sddm/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h4 style="color: #ffffff; font-size: 32px; margin-bottom: 15px; text-align: center;">Finally!</h4>
+
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/sddm/4.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        <br/>
+        <div style="background-color: #00B0C8;"></div>
+
+
+
+        <!-- Create Your Own Theme -->
+        <table style="margin: 20px 0;">
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h1 style="color: #FFFFFF; font-size: 32px; margin-bottom: 15px;">Create Your Own Theme</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h5 style="color: #00B0C8; font-size: 32px; margin-bottom: 15px;">April 5, 2024 · One min read</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin: 20px 0;">
+            <tr>
+                <!-- Image Cell -->
+                <td style="text-align: left; vertical-align: top;">
+                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                </td>
+    
+                <!-- Text Cells -->
+                <td style="padding-left: 20px; vertical-align: top;">
+                    <h4 style="color: #00C8B0; font-size: 15px; margin: 0;">Mahmoud Mohammed</h4>
+                    <h5 style="color: #FFFFFF; font-size: 15px; margin-top: 10px;">Team Leader, Core Dev, Release Manager, Package Maintainer</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <br/>
+        
+        
+        <!-- PGP Error Resolution Instructions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+            <h5 style="color: #FFFFFF;">you can easily create your themes with the same steps for all WMs (currently <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">DWM</code> comes with one theme)</h5>
+            <h5 style="color: #FFFFFF;"> Go to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/bspwm/themes/</code> </h5>
+            <h5 style="color: #FFFFFF;"> Copy an existing theme and rename it, eg <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">Ethereum</code> </h5>
+            <h5 style="color: #FFFFFF;"> Edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">theme.conf</code> </h5>
+
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/CreateCustomTheme/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> Generate Color Scheme for the theme using <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">python-pywal</code></h5>
+            <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">wal -i /usr/share/backgrounds/Etherium.jpg</code></h5>
+            
+            <br/>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/CreateCustomTheme/GeneratedColorScheme.png" border="0" width=900 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> add the Color Scheme to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">colorScheme</code></h5>
+            
+            <br/>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/CreateCustomTheme/AddColorScheme.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/CreateCustomTheme/Hint.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> Then Edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">polybar</code> config</h5>
+            
+            <br/>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/CreateCustomTheme/warning.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> Then take a screenshot and save it in the theme directory with name <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">preview.png</code></h5>
+            
+            <br/>
+            
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/CreateCustomTheme/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h4 style="color: #ffffff; font-size: 32px; margin-bottom: 15px; text-align: center;">Finally!</h4>
+
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/CreateCustomTheme/preview.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+        </div>
+        
+        
+        
+        <br/>
+        <div style="background-color: #00B0C8;"></div>
+
+
+
+        <!-- setup custom monitors config -->
+        <table style="margin: 20px 0;">
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h1 style="color: #FFFFFF; font-size: 32px; margin-bottom: 15px;">setup custom monitors config</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h5 style="color: #00B0C8; font-size: 32px; margin-bottom: 15px;">April 5, 2024 · One min read</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin: 20px 0;">
+            <tr>
+                <!-- Image Cell -->
+                <td style="text-align: left; vertical-align: top;">
+                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                </td>
+    
+                <!-- Text Cells -->
+                <td style="padding-left: 20px; vertical-align: top;">
+                    <h4 style="color: #00C8B0; font-size: 15px; margin: 0;">Mahmoud Mohammed</h4>
+                    <h5 style="color: #FFFFFF; font-size: 15px; margin-top: 10px;">Team Leader, Core Dev, Release Manager, Package Maintainer</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <br/>
+        
+        
+        <!-- PGP Error Resolution Instructions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+        
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/monitors/Note.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> use <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">arandr</code> to configure monitors</h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/monitors/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> save your configure </h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/monitors/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> add configure file path to the <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">monitors-layouts</code> in the <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">monitors-layouts</code> </h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/monitors/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            
+            
+            <br/>
+        <div style="background-color: #00B0C8;"></div>
+
+
+
+        <!-- setup Polybar Modules -->
+        <table style="margin: 20px 0;">
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h1 style="color: #FFFFFF; font-size: 32px; margin-bottom: 15px;">setup Polybar Modules</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;">
+                    <h5 style="color: #00B0C8; font-size: 32px; margin-bottom: 15px;">April 5, 2024 · 3 min read</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin: 20px 0;">
+            <tr>
+                <!-- Image Cell -->
+                <td style="text-align: left; vertical-align: top;">
+                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                </td>
+    
+                <!-- Text Cells -->
+                <td style="padding-left: 20px; vertical-align: top;">
+                    <h4 style="color: #00C8B0; font-size: 15px; margin: 0;">Mahmoud Mohammed</h4>
+                    <h5 style="color: #FFFFFF; font-size: 15px; margin-top: 10px;">Team Leader, Core Dev, Release Manager, Package Maintainer</h5>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="text-align: left; padding: 20px;">
+            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+        </div>
+        
+        <br/>
+        
+        
+        <!-- PGP Error Resolution Instructions -->
+        <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
+        
+            <h2 align="left"> weather Module</h2>
+        
+            <h5 style="color: #FFFFFF;"> create an account on <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">OpenWeatherMap</code> to configure monitors</h5>
+            <h5 style="color: #FFFFFF;"> go to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">API</code> page</h5>
+            <h5 style="color: #FFFFFF;"> generate an API Key</h5>
+            
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/weather/0.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> copy the API Key </h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/weather/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/bspwm/exodia.conf</code> </h5>
+            <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">weather-API</code></h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/weather/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> go to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">OpenWeatherMap</code> </h5>
+            <h5 style="color: #FFFFFF;"> search for your city</h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/weather/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> press on the result</h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/weather/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> copy city ID</h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/weather/5.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/bspwm/exodia.conf</code> </h5>
+            <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">weather-city-ID</code> </h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/weather/6.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> save file and restart polybar ( open terminal <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">bspbar</code> )</h5>
+        
+
+            <br/> <br/>
+            <h2 align="left"> github-notifications Module</h2>
+        
+            <h5 style="color: #FFFFFF;"> generate a new <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">Personal access tokens</code> </h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/github/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> select the classic</h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/github/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> in <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">Note</code> set the name as you like, in <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">Expiration</code> set to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">No expiration</code></h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/github/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> select notifications </h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/github/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> copy access tokens </h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/github/5.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">nvim ~/.config/bspwm/exodia.conf</code></h5>
+            
+            <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">github-username</code> to your <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">username</code></h5>
+            <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">github-access-token</code> to your <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">accessTokens</code></h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/github/6.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+            <h5 style="color: #FFFFFF;"> save file and restart polybar ( open terminal <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">bspbar</code> )</h5>
+            <br/>
+            <div style="text-align: left; padding: 20px;">
+                <img src="imgs/tips/github/github.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            </div>
+            
+    </div>
+    """.format(self.predator_font.family())
         self.internal_window.updateContent(tips_text)
+
+
 
     def displaySettingContent(self):
         setting_text = """
@@ -415,7 +1075,9 @@ class ButtonContent:
             
                 </ul>
                 
-                <br>
+                <br/>
+                <div style="background-color: #00B0C8;"></div>
+                <br/>
                 
                 <div style="text-align: center; margin: 20px 0;">
                     <h1 style="color: #00C8B0; font-size: 32px; margin-bottom: 15px;">Community Contributes</h1>
