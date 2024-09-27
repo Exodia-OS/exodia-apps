@@ -30,7 +30,7 @@ class ButtonContent:
         welcome_text = """
         
             <div style="text-align: center; padding: 20px;">
-                <img src="icons/exodia-cyan.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/icons/exodia-cyan.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <div style="font-family: {}; color: #00B0C8; line-height: 1.6; font-size: 18px; max-width: 800px; margin: auto; padding: 0 20px;">
@@ -49,7 +49,7 @@ class ButtonContent:
                 </p>
                 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="imgs/desktop.png" alt="Exodia OS Desktop" width="785" height="320" style="border: 2px solid #00C8B0; border-radius: 10px; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/desktop.png" alt="Exodia OS Desktop" width="785" height="320" style="border: 2px solid #00C8B0; border-radius: 10px; max-width: 100%; height: auto;">
                 </div>
                 
                 <h2 style="color: #00C8B0; font-size: 28px; margin-top: 30px;">Benefits:</h2>
@@ -171,19 +171,19 @@ class ButtonContent:
                 
                 <div style="text-align: left; padding: 20px;">
                     
-                    <img src="imgs/Showcase/1.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/1.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     <br/>
-                    <img src="imgs/Showcase/2.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/2.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     <br/>
-                    <img src="imgs/Showcase/3.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/3.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     <br/>
-                    <img src="imgs/Showcase/4.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/4.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     <br/>
-                    <img src="imgs/Showcase/5.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/5.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     <br/>
-                    <img src="imgs/Showcase/6.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/6.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     <br/>
-                    <img src="imgs/Showcase/7.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/7.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     
                 </div>
             
@@ -216,7 +216,7 @@ class ButtonContent:
                 <br/>
                 
                 <div style="text-align: left; padding: 20px;">
-                    <img src="imgs/Keybinding/Note.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Keybinding/Note.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                 </div>
                 
                 <br/>
@@ -235,7 +235,7 @@ class ButtonContent:
                 <br/>
                 
                 <div style="text-align: left; padding: 20px;">
-                    <img src="imgs/Keybinding/bspwm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Keybinding/bspwm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                 </div>
                 
                 <br/>
@@ -254,7 +254,7 @@ class ButtonContent:
                 <br/>
                 
                 <div style="text-align: left; padding: 20px;">
-                    <img src="imgs/Keybinding/i3wm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Keybinding/i3wm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                 </div>
                 
                 <br/>
@@ -273,7 +273,7 @@ class ButtonContent:
                 <br/>
                 
                 <div style="text-align: left; padding: 20px;">
-                    <img src="imgs/Keybinding/dwm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/Keybinding/dwm.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                 </div>
                 
                 
@@ -303,7 +303,7 @@ class ButtonContent:
             <tr>
                 <!-- Image Cell -->
                 <td style="text-align: left; vertical-align: top;">
-                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                 </td>
     
                 <!-- Text Cells -->
@@ -315,7 +315,7 @@ class ButtonContent:
         </table>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <br/>
@@ -362,7 +362,7 @@ class ButtonContent:
             <tr>
                 <!-- Image Cell -->
                 <td style="text-align: left; vertical-align: top;">
-                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                 </td>
     
                 <!-- Text Cells -->
@@ -374,7 +374,7 @@ class ButtonContent:
         </table>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <br/>
@@ -413,7 +413,7 @@ class ButtonContent:
             <tr>
                 <!-- Image Cell -->
                 <td style="text-align: left; vertical-align: top;">
-                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                 </td>
     
                 <!-- Text Cells -->
@@ -425,7 +425,7 @@ class ButtonContent:
         </table>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <br/>
@@ -439,7 +439,7 @@ class ButtonContent:
         </div>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/tips/keyboardLayouts/0.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/tips/keyboardLayouts/0.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <!-- older versions -->
@@ -481,7 +481,7 @@ class ButtonContent:
             <tr>
                 <!-- Image Cell -->
                 <td style="text-align: left; vertical-align: top;">
-                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                 </td>
     
                 <!-- Text Cells -->
@@ -493,13 +493,13 @@ class ButtonContent:
         </table>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <br/>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/tips/sddm/0.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/tips/sddm/0.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <!-- PGP Error Resolution Instructions -->
@@ -508,24 +508,24 @@ class ButtonContent:
             <h5 style="color: #FFFFFF;"> in my case my pic -> IMG.jpg <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">sudo cp IMG.jpg /usr/share/sddm/faces/</code> </h5>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/sddm/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/sddm/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> set pic name to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">username.face.icon</code></h5>
             <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">sudo mv IMG.jpg o0xwolf.face.icon</code></h5>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/sddm/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/sddm/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/sddm/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/sddm/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h4 style="color: #ffffff; font-size: 32px; margin-bottom: 15px; text-align: center;">Finally!</h4>
 
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/sddm/4.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/sddm/4.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
         </div>
@@ -556,7 +556,7 @@ class ButtonContent:
             <tr>
                 <!-- Image Cell -->
                 <td style="text-align: left; vertical-align: top;">
-                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                 </td>
     
                 <!-- Text Cells -->
@@ -568,7 +568,7 @@ class ButtonContent:
         </table>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <br/>
@@ -582,7 +582,7 @@ class ButtonContent:
             <h5 style="color: #FFFFFF;"> Edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">theme.conf</code> </h5>
 
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/CreateCustomTheme/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/CreateCustomTheme/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> Generate Color Scheme for the theme using <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">python-pywal</code></h5>
@@ -591,7 +591,7 @@ class ButtonContent:
             <br/>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/CreateCustomTheme/GeneratedColorScheme.png" border="0" width=900 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/CreateCustomTheme/GeneratedColorScheme.png" border="0" width=900 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> add the Color Scheme to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">colorScheme</code></h5>
@@ -599,11 +599,11 @@ class ButtonContent:
             <br/>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/CreateCustomTheme/AddColorScheme.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/CreateCustomTheme/AddColorScheme.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/CreateCustomTheme/Hint.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/CreateCustomTheme/Hint.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> Then Edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">polybar</code> config</h5>
@@ -611,7 +611,7 @@ class ButtonContent:
             <br/>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/CreateCustomTheme/warning.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/CreateCustomTheme/warning.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> Then take a screenshot and save it in the theme directory with name <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">preview.png</code></h5>
@@ -619,13 +619,13 @@ class ButtonContent:
             <br/>
             
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/CreateCustomTheme/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/CreateCustomTheme/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h4 style="color: #ffffff; font-size: 32px; margin-bottom: 15px; text-align: center;">Finally!</h4>
 
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/CreateCustomTheme/preview.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/CreateCustomTheme/preview.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
         </div>
@@ -655,7 +655,7 @@ class ButtonContent:
             <tr>
                 <!-- Image Cell -->
                 <td style="text-align: left; vertical-align: top;">
-                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                 </td>
     
                 <!-- Text Cells -->
@@ -667,7 +667,7 @@ class ButtonContent:
         </table>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <br/>
@@ -677,25 +677,25 @@ class ButtonContent:
         <div style="padding: 20px; border-radius: 10px; margin-top: 20px;">
         
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/monitors/Note.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/monitors/Note.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> use <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">arandr</code> to configure monitors</h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/monitors/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/monitors/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> save your configure </h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/monitors/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/monitors/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> add configure file path to the <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">monitors-layouts</code> in the <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">monitors-layouts</code> </h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/monitors/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/monitors/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             
@@ -723,7 +723,7 @@ class ButtonContent:
             <tr>
                 <!-- Image Cell -->
                 <td style="text-align: left; vertical-align: top;">
-                    <img src="imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                    <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="70" height="70" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                 </td>
     
                 <!-- Text Cells -->
@@ -735,7 +735,7 @@ class ButtonContent:
         </table>
         
         <div style="text-align: left; padding: 20px;">
-            <img src="imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <img src="/usr/share/exodia/exodia-assistant/imgs/FreePalestine.png"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
         </div>
         
         <br/>
@@ -752,46 +752,46 @@ class ButtonContent:
             
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/weather/0.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/weather/0.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> copy the API Key </h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/weather/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/weather/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/bspwm/exodia.conf</code> </h5>
             <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">weather-API</code></h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/weather/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/weather/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> go to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">OpenWeatherMap</code> </h5>
             <h5 style="color: #FFFFFF;"> search for your city</h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/weather/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/weather/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> press on the result</h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/weather/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/weather/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> copy city ID</h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/weather/5.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/weather/5.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> edit <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">~/.config/bspwm/exodia.conf</code> </h5>
             <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">weather-city-ID</code> </h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/weather/6.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/weather/6.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> save file and restart polybar ( open terminal <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">bspbar</code> )</h5>
@@ -803,31 +803,31 @@ class ButtonContent:
             <h5 style="color: #FFFFFF;"> generate a new <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">Personal access tokens</code> </h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/github/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/github/1.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> select the classic</h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/github/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/github/2.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> in <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">Note</code> set the name as you like, in <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">Expiration</code> set to <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">No expiration</code></h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/github/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/github/3.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> select notifications </h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/github/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/github/4.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> copy access tokens </h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/github/5.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/github/5.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">nvim ~/.config/bspwm/exodia.conf</code></h5>
@@ -836,13 +836,13 @@ class ButtonContent:
             <h5 style="color: #FFFFFF;"> set <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">github-access-token</code> to your <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">accessTokens</code></h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/github/6.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/github/6.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
             <h5 style="color: #FFFFFF;"> save file and restart polybar ( open terminal <code style="background-color: #222222; color: #00B0C8; padding: 2px 4px; border-radius: 4px;">bspbar</code> )</h5>
             <br/>
             <div style="text-align: left; padding: 20px;">
-                <img src="imgs/tips/github/github.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                <img src="/usr/share/exodia/exodia-assistant/imgs/tips/github/github.png" border="0"  style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
             </div>
             
     </div>
@@ -945,7 +945,7 @@ class ButtonContent:
                     <tr>
                         
                         <td style="text-align: left;">
-                            <img src="imgs/team/Ozil.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                            <img src="/usr/share/exodia/exodia-assistant/imgs/team/Ozil.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                         </td>
                         
                         <td style="padding-left: 20px;">
@@ -985,7 +985,7 @@ class ButtonContent:
                     <tr>
                     
                         <td style="text-align: left;">
-                            <img src="imgs/team/Budas.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                            <img src="/usr/share/exodia/exodia-assistant/imgs/team/Budas.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                         </td>
                     
                         <td style="padding-left: 20px;">
@@ -1017,7 +1017,7 @@ class ButtonContent:
                     <tr>
                     
                         <td style="text-align: left;">
-                            <img src="imgs/team/Joe.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                            <img src="/usr/share/exodia/exodia-assistant/imgs/team/Joe.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                         </td>
                     
                         <td style="padding-left: 20px;">
@@ -1049,7 +1049,7 @@ class ButtonContent:
                     <tr>
                     
                         <td style="text-align: left;">
-                            <img src="imgs/team/DonSom3a.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                            <img src="/usr/share/exodia/exodia-assistant/imgs/team/DonSom3a.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                         </td>
                     
                         <td style="padding-left: 20px;">
@@ -1089,7 +1089,7 @@ class ButtonContent:
                     <tr>
                     
                         <td style="text-align: left;">
-                            <img src="imgs/team/NahianAdnan.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
+                            <img src="/usr/share/exodia/exodia-assistant/imgs/team/NahianAdnan.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%; max-width: 100%; height: auto;">
                         </td>
                     
                         <td style="padding-left: 20px;">
