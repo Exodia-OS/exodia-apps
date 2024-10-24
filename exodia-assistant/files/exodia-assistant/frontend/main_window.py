@@ -197,7 +197,7 @@ class CustomShapeWindow(QMainWindow):
         painter.setRenderHint(QPainter.Antialiasing)
 
         # Draw background or other custom content
-        painter.setBrush(QBrush(QColor("#1f1f1f")))
+        painter.setBrush(QBrush(QColor("#151A21")))
         painter.drawRect(self.rect())
 
         # Draw the logo in the top left corner, slightly moved to the right
@@ -235,8 +235,11 @@ class CustomShapeWindow(QMainWindow):
 
         # Create a gradient from "#141414" to "#0D0D0D"
         gradient = QLinearGradient(self.width() / 2 - 200, 0, self.width() / 2 - 200, 70)
-        gradient.setColorAt(0, QColor("#121212"))
-        gradient.setColorAt(1, QColor("#121212"))
+        gradient.setColorAt(0, QColor("#15191F"))
+        gradient.setColorAt(1, QColor("#0D1117"))
+
+        # Set no pen to remove the border
+        painter.setPen(Qt.NoPen)
 
         # Set the gradient brush for the trapezoid background
         painter.setBrush(QBrush(gradient))

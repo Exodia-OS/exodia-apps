@@ -184,10 +184,6 @@ class ButtonContent:
                     <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/6.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     <br/>
                     <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/7.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
-                    <br/>
-                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/8.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
-                    <br/>
-                    <img src="/usr/share/exodia/exodia-assistant/imgs/Showcase/8.png" border="0" width=1000 style="margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
                     
                 </div>
             

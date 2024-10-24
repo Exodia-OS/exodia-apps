@@ -36,7 +36,7 @@ class InternalWindow(QWidget):
 
         # Create a widget to hold the content (which will be scrollable)
         scroll_content = QWidget()
-        scroll_content.setStyleSheet("background-color: #0E1218;")  # Transparent background for content
+        scroll_content.setStyleSheet("background-color: #121212;")  # Transparent background for content
         scroll_area.setWidget(scroll_content)
 
         # Create a layout for the scrollable content
@@ -44,7 +44,7 @@ class InternalWindow(QWidget):
 
         # Content label that will be scrollable
         self.content_label = QLabel(scroll_content)
-        self.content_label.setStyleSheet("color: #0E1218; font-size: 20px; padding: 10px;")
+        self.content_label.setStyleSheet("color: #121212; font-size: 20px; padding: 10px;")
         self.content_label.setWordWrap(True)  # Allow the text to wrap
 
         layout.addWidget(self.content_label)  # Add the label to the layout
@@ -90,7 +90,7 @@ class InternalWindow(QWidget):
         painter.setRenderHint(QPainter.Antialiasing)
 
         # Draw the custom shape with a color fill
-        painter.setBrush(QBrush(QColor("#0E1218")))  # Use a custom background color
+        painter.setBrush(QBrush(QColor("#121212")))  # Use a custom background color
         painter.drawPolygon(self.polygon)  # Draw the filled polygon
 
         # Draw the border with the specified color

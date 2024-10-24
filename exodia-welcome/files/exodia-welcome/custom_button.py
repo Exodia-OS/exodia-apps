@@ -14,7 +14,7 @@ from PyQt5.QtGui import QPainter, QColor, QRegion, QPolygon, QPen, QFont, QFontD
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 
 class CustomButton(QPushButton):
-    def __init__(self, text, points, x, y, width, height, callback, color="#0E1218", border_color="#00B0C8", border_thickness=5, parent=None):
+    def __init__(self, text, points, x, y, width, height, callback, color="#121212", border_color="#00B0C8", border_thickness=5, parent=None):
         super().__init__(text, parent)
         self.predator_font = None
         self.callback = callback  # Store the callback function
