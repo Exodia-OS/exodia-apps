@@ -3,8 +3,8 @@
 #
 
 pkgname=about-exodia-os
-pkgver=1.0
-pkgrel=5
+pkgver=2.0
+pkgrel=1
 pkgdesc="About Exodia OS"
 url="https://github.com/Exodia-OS/exodia-apps"
 arch=('any')
@@ -15,18 +15,18 @@ depends=('yad')
 conflicts=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
+install=${pkgname}.install
 
-source=(
-	'about-exodia-os'
-	'about.desktop'
-)
+prepare() {
 
-sha256sums=(
-	'SKIP'
-	'SKIP'
-)
+	cp -af ../files/. ${srcdir}
+
+}
 
 package() {
-	install -Dm 755 about-exodia-os   		${pkgdir}/usr/local/bin/about-exodia-os
-	install -Dm 644 about.desktop	        ${pkgdir}/usr/share/applications/about.desktop
+
+	(find about-exodia-os -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/exodia/{}" \;)
+	install -Dm 644 ${srcdir}/about-exodia-os.desktop	    ${pkgdir}/usr/share/applications/about-exodia-os.desktop
+	install -Dm 755 ${srcdir}/${pkgname}/about-exodia-os    ${pkgdir}/usr/local/bin/about-exodia-os
+
 }

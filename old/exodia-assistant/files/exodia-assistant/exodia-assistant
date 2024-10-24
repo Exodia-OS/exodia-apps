@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+# Welcome App for Exodia OS #
+
+# path to files #
+FILES_PATH="/usr/share/exodia/exodia-assistant"
+FILES_PATH_TESTING=$(pwd)
+# open the app in the floating mode #
+bspc rule -a Tk state=floating follow=on focus=on border=off
+
+# Run the app #
+python3 "${FILES_PATH}"/exodia-assistant.py

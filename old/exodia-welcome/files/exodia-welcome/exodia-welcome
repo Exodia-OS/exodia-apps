@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS        #
+#                                   #
+#####################################
+
+# Welcome App for Exodia OS #
+
+bspc rule -a Exodia-welcome.py state=floating follow=on focus=on # open the app in the floating mode #
+
+# Run the app #
+python3 /usr/share/exodia/exodia-welcome/exodia-welcome.py

@@ -5,13 +5,16 @@
 #  @author      : 00xWolf           #
 #    GitHub    : @mmsaeed509       #
 #    Developer : Mahmoud Mohamed   #
-#  﫥  Copyright : Exodia OS        #
+#  﫥  Copyright : Exodia OS         #
 #                                   #
 #####################################
 
 # Welcome App for Exodia OS #
 
-bspc rule -a Exodia-welcome.py state=floating follow=on focus=on # open the app in the floating mode #
+# path to files #
+FILES_PATH="/usr/share/exodia/exodia-welcome"
+# shellcheck disable=SC2034
+FILES_PATH_TESTING=$(pwd)
 
 # Run the app #
-python3 /usr/share/exodia/exodia-welcome/exodia-welcome.py
+python3 "${FILES_PATH}"/main.py

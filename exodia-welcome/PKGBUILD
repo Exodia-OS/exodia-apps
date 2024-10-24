@@ -3,18 +3,18 @@
 #
 
 pkgname=exodia-welcome
-pkgver=2.0
-pkgrel=4
+pkgver=3.0
+pkgrel=1
 pkgdesc="Welcome app for Exodia OS"
 url="https://github.com/Exodia-OS/exodia-apps"
 arch=('any')
 license=('GPL3')
-makedepends=()
-depends=('libwnck3' 'arandr')
+depends=('python-pyqt5' 'python-pyqt5-chart' 'python-xlib')
 groups=('exodia-apps')
 conflicts=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
+install=${pkgname}.install
 
 prepare() {
 
@@ -24,13 +24,8 @@ prepare() {
 
 package() {
 
-	SHARE_DIR=${pkgdir}/usr/share/exodia/exodia-welcome
-
-	mkdir -p ${SHARE_DIR}
-
-	cp -r ${srcdir}/${pkgname}/* ${SHARE_DIR}
-
-	install -Dm 644 exodia-welcome.desktop	${pkgdir}/usr/share/applications/exodia-welcome.desktop
-	install -Dm 755 exodia-welcome/exodia-welcome 			${pkgdir}/usr/local/bin/exodia-welcome	
+	(find exodia-welcome -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/exodia/{}" \;)
+	install -Dm 644 ${srcdir}/exodia-welcome.desktop	   ${pkgdir}/usr/share/applications/exodia-welcome.desktop
+	install -Dm 755 ${srcdir}/${pkgname}/exodia-welcome    ${pkgdir}/usr/local/bin/exodia-welcome
 
 }

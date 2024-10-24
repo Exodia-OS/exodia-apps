@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS	     #
+#                                   #
+#####################################
+
+# About Exodia OS #
+
+# path to files #
+FILES_PATH="/usr/share/exodia/about-exodia-os"
+# shellcheck disable=SC2034
+FILES_PATH_TESTING=$(pwd)
+
+# Run the app #
+python3 "${FILES_PATH}"/main_window.py

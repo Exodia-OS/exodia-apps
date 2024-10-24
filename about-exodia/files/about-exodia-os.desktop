@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=About Exodia OS
+Comment=About Exodia OS
+Exec=about-exodia-os
+Icon=exodia-yellow
+Type=Application
+Categories=System;
