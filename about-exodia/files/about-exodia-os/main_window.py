@@ -217,7 +217,7 @@ class ButtonContent:
                     <tr>
                         
                         <td style="text-align: left;">
-                            <img src="/usr/share/exodia/exodia-welcome/imgs/Ozil.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%;">
+                            <img src="/usr/share/exodia/about-exodia-os/imgs/Ozil.png" alt="Ozil" width="115" height="115" style="border: 2px solid #00C8B0; border-radius: 50%;">
                         </td>
                         
                         <td style="padding-left: 20px;">
