@@ -1,15 +1,6 @@
-#####################################
-#                                   #
-#  @author      : 00xWolf           #
-#    GitHub    : @mmsaeed509       #
-#    Developer : Mahmoud Mohamed   #
-#  﫥  Copyright : Exodia OS         #
-#                                   #
-#####################################
-
 import sys
 import os
-from PyQt5.QtCore import Qt, QPoint, QRect
+from PyQt5.QtCore import Qt, QPoint, QRect, QPropertyAnimation, QSize
 from PyQt5.QtGui import QPainter, QColor, QRegion, QPolygon, QPen, QFont, QFontDatabase
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 
@@ -19,15 +10,21 @@ class CustomButton(QPushButton):
         self.currently_pressed_button = None
         self.predator_font = None
         self.callback = callback  # Store the callback function
-        # self.setFixedSize(width, height)
         self.setFixedSize(200, 100)
-        self.polygon = QPolygon(points)
+        self.original_points = QPolygon(points)  # Store the original polygon points
+        self.reduced_points = QPolygon([
+            QPoint(300, 20),
+            QPoint(300, 80),
+            QPoint(50, 80),
+            QPoint(50, 45),
+            QPoint(80, 20)
+        ])  # Define the reduced points
         self.color = color
         self.border_color = border_color
         self.border_thickness = border_thickness
         self.setGeometry(QRect(x, y, width, height))
         self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setMask(QRegion(self.polygon))
+        self.setMask(QRegion(self.original_points))
 
         self.loadPredatorFont()
 
@@ -53,12 +50,12 @@ class CustomButton(QPushButton):
 
         painter.setBrush(background_color)
         painter.setPen(Qt.NoPen)
-        painter.drawPolygon(self.polygon)
+        painter.drawPolygon(self.original_points if self.parent().currently_pressed_button != self else self.reduced_points)
 
         pen = QPen(QColor(self.border_color))
         pen.setWidth(self.border_thickness)
         painter.setPen(pen)
-        painter.drawPolygon(self.polygon)
+        painter.drawPolygon(self.original_points if self.parent().currently_pressed_button != self else self.reduced_points)
 
         pen = QPen(text_color)
         painter.setPen(pen)
@@ -71,33 +68,34 @@ class CustomButton(QPushButton):
         self.callback()  # Trigger the callback when the button is clicked
         self.parent().setCurrentButton(self)
 
-    def setCurrentButton(self, self1):
-        pass
+    def setCurrentButton(self, button):
+        if self.currently_pressed_button:
+            # Restore the previously pressed button's shape
+            self.currently_pressed_button.original_points = self.currently_pressed_button.original_points
+            self.currently_pressed_button.update()
+        self.currently_pressed_button = button
+        # Change the current button to reduced points
+        self.currently_pressed_button.original_points = self.currently_pressed_button.reduced_points
+        self.currently_pressed_button.update()
 
 
 class CustomButtonPanel(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        # self.setFixedSize(width, height)
         self.setFixedSize(200, 250)  # Adjust the size of the main window as needed
-        # Set the geometry (position and size) of the internal window
-        # self.setGeometry(x, y, width, height)
         self.setGeometry(30, 200, 400, 200)
-        self.setAttribute(Qt.WA_TranslucentBackground) # Make the background transparent
+        self.setAttribute(Qt.WA_TranslucentBackground)  # Make the background transparent
 
-        # Initialize the currently pressed button
         self.currently_pressed_button = None
 
         # Set up a layout for the panel with zero spacing
         layout = QVBoxLayout()
-        # layout.setContentsMargins(left, top, right, bottom)
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setSpacing(0)
         self.setLayout(layout)
 
         # Define the shape points, positions, and sizes for each button
         buttons_config = [
-            # Welcome Button
             {
                 'text': 'Welcome',
                 'points': [
@@ -110,7 +108,6 @@ class CustomButtonPanel(QWidget):
                 'x': 50, 'y': 50, 'width': 200, 'height': 100,
                 'callback': parent.displayWelcomeContent  # Set the callback function
             },
-            # Keybinding Button
             {
                 'text': 'Keybinding',
                 'points': [
@@ -123,9 +120,8 @@ class CustomButtonPanel(QWidget):
                 'x': 50, 'y': 160, 'width': 200, 'height': 100,
                 'callback': parent.displayKeybindingContent
             },
-            # Developers Button
             {
-                'text': 'Creator',
+                'text': 'Credits',
                 'points': [
                     QPoint(300, 20),
                     QPoint(300, 80),
@@ -149,7 +145,6 @@ class CustomButtonPanel(QWidget):
                 height=config['height'],
                 callback=config['callback']
             )
-            # Add the button to the layout
             self.layout().addWidget(button)
 
     def setCurrentButton(self, button):
@@ -157,3 +152,5 @@ class CustomButtonPanel(QWidget):
             self.currently_pressed_button.update()
         self.currently_pressed_button = button
         self.currently_pressed_button.update()
+
+

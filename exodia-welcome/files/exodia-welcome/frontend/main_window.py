@@ -7,13 +7,66 @@
 #                                   #
 #####################################
 
+# AddLogo Class #
+import os
+from PyQt5.QtCore import Qt, QPoint
+from PyQt5.QtGui import QPainter, QColor, QRegion, QPixmap, QPen
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtGui import QPainterPath
+
+class AddLogo(QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        # Set the geometry (position and size) of the internal window
+        # self.setGeometry(x, y, width, height)
+        self.setGeometry(30, 20, 150, 150)
+        self.setAttribute(Qt.WA_TranslucentBackground)  # Make the background transparent
+        self.radius = min(self.width(), self.height()) // 2
+        self.image_path = os.path.expanduser("/usr/share/exodia/exodia-welcome/images/exodia-cyan.png")  # Expand the tilde to the full path
+        self.pixmap = QPixmap(self.image_path)
+
+        # Check if the pixmap is loaded correctly
+        if self.pixmap.isNull():
+            print(f"Failed to load image from: {self.image_path}")
+
+    def createCustomMask(self):
+        # Define a circular mask
+        path = QPainterPath()
+        path.addEllipse(0, 0, self.width(), self.height())
+        mask = QRegion(path.toFillPolygon().toPolygon())
+        self.setMask(mask)  # Apply the mask to make the window circular
+        return path  # Return the path for use in the paint event
+
+    def paintEvent(self, event):
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing)
+
+        # Draw the custom shape with the image fill if the pixmap is valid
+        if not self.pixmap.isNull():
+            # Get the bounding rectangle of the circular path
+            bounding_rect = self.rect()
+
+            # Scale the pixmap to fit the bounding rectangle of the circle
+            scaled_pixmap = self.pixmap.scaled(
+                bounding_rect.size(), Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation
+            )
+
+            # Clip the painter to the circular region
+            painter.setClipRegion(QRegion(self.createCustomMask().toFillPolygon().toPolygon()))
+
+            # Calculate offsets to center the pixmap within the bounding rectangle
+            offset_x = (bounding_rect.width() - scaled_pixmap.width()) // 2
+            offset_y = (bounding_rect.height() - scaled_pixmap.height()) // 2
+
+            # Draw the scaled pixmap centered within the circle
+            painter.drawPixmap(offset_x, offset_y, scaled_pixmap)
+
+########################################################################################################################
 import os
 from PyQt5.QtCore import Qt, QPoint, QRect
 from PyQt5.QtGui import QPainter, QBrush, QPolygon, QColor, QRegion, QFont, QFontDatabase, QPixmap, QPainterPath, QLinearGradient, QPen
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QWidget, QApplication
 from frontend.internal_window import InternalWindow
-from frontend.add_logo import AddLogo
-from frontend.custom_button import CustomButton  # Import the button panel
 from frontend.custom_button import CustomButtonPanel  # Import the button panel
 from Xlib import X, display
 from Xlib.Xatom import STRING
@@ -144,9 +197,6 @@ class CustomShapeWindow(QMainWindow):
         self.button_panel = CustomButtonPanel(self)
         # self.button_panel.setGeometry(40, 210, 200, 300)  # Adjust the position and size as needed
         self.button_panel.show()
-
-    def minimizeWindow(self):
-        self.showMinimized()
 
     def closeWindow(self):
         self.close()
