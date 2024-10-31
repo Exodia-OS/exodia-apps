@@ -22,7 +22,7 @@ class AddLogo(QWidget):
         self.setGeometry(30, 20, 150, 150)
         self.setAttribute(Qt.WA_TranslucentBackground)  # Make the background transparent
         self.radius = min(self.width(), self.height()) // 2
-        self.image_path = os.path.expanduser("/usr/share/exodia/exodia-welcome/images/exodia-cyan.png")  # Expand the tilde to the full path
+        self.image_path = os.path.expanduser("/usr/share/pixmaps/exodia-cyan.png")  # Expand the tilde to the full path
         self.pixmap = QPixmap(self.image_path)
 
         # Check if the pixmap is loaded correctly

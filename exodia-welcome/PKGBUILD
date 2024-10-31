@@ -4,7 +4,7 @@
 
 pkgname=exodia-welcome
 pkgver=3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Welcome app for Exodia OS"
 url="https://github.com/Exodia-OS/exodia-apps"
 arch=('any')

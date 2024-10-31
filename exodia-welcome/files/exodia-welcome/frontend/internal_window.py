@@ -67,6 +67,13 @@ class InternalWindow(QWidget):
             }
         """)
 
+    def createContentWidget(self, html_content):
+        label = QLabel()
+        label.setTextFormat(Qt.RichText)  # Enable rich text format
+        label.setText(html_content)       # Set the HTML content
+        label.setWordWrap(True)           # Enable word wrap if needed
+        return label
+
     def createCustomMask(self):
         # Define points for an 8-sided polygon
         points = [
